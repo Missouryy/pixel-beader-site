@@ -181,7 +181,8 @@ h1 {
 
 .feature p,
 .policy p,
-.content-list p {
+.content-list p,
+.quick-list p {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
@@ -201,16 +202,32 @@ h1 {
 }
 
 .content-list,
-.policy {
+.policy,
+.quick-list {
   max-width: 880px;
   display: grid;
   gap: 22px;
 }
 
 .content-list article,
-.policy {
+.policy,
+.quick-list {
   border-top: 1px solid var(--line);
   padding-top: 22px;
+}
+
+.quick-list {
+  max-width: 680px;
+  gap: 0;
+}
+
+.quick-list p {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
 }
 
 .policy h2 {
