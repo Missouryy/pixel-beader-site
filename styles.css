@@ -1,14 +1,13 @@
 :root {
   color-scheme: light;
   --ink: #1e2329;
-  --muted: #68727d;
-  --line: #d8dee5;
+  --muted: #6e6e73;
+  --line: #d2d2d7;
   --surface: #ffffff;
-  --soft: #f3f6f8;
-  --accent: #1186e8;
-  --accent-dark: #0965b5;
-  --warm: #f5dfcf;
-  --green: #2b9d72;
+  --soft: #f5f5f7;
+  --accent: #0071e3;
+  --accent-dark: #06c;
+  --warm: #fbf7f2;
 }
 
 * {
@@ -17,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   color: var(--ink);
   background: var(--surface);
 }
@@ -31,10 +30,10 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 72px;
-  padding: 14px clamp(18px, 5vw, 64px);
+  min-height: 52px;
+  padding: 8px clamp(18px, 5vw, 64px);
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.82);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -47,12 +46,12 @@ a {
   gap: 12px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 8px;
 }
 
@@ -61,7 +60,7 @@ nav {
   align-items: center;
   gap: 18px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 nav a {
@@ -73,42 +72,44 @@ nav a:hover {
 }
 
 .hero {
-  min-height: calc(100svh - 72px);
+  min-height: calc(100svh - 52px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+  grid-template-columns: minmax(320px, 430px) minmax(360px, 560px);
   align-items: center;
-  gap: clamp(28px, 6vw, 80px);
-  padding: clamp(36px, 7vw, 88px) clamp(20px, 6vw, 84px);
-  background:
-    linear-gradient(90deg, rgba(245, 223, 207, 0.56), rgba(255, 255, 255, 0) 52%),
-    var(--surface);
+  justify-content: center;
+  gap: clamp(42px, 7vw, 112px);
+  padding: clamp(42px, 6vw, 82px) clamp(22px, 6vw, 84px);
+  background: linear-gradient(115deg, var(--warm), #fff 46%, var(--soft));
+  overflow: hidden;
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 430px;
 }
 
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-dark);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(46px, 8vw, 92px);
-  line-height: 0.95;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 7vw, 88px);
+  line-height: 1;
   letter-spacing: 0;
 }
 
 .lead {
-  margin: 20px 0 0;
-  max-width: 620px;
+  margin: 18px 0 0;
+  max-width: 390px;
   color: var(--muted);
-  font-size: clamp(18px, 2.1vw, 23px);
-  line-height: 1.45;
+  font-size: clamp(22px, 2.1vw, 30px);
+  line-height: 1.22;
+  font-weight: 600;
 }
 
 .actions {
@@ -122,9 +123,9 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 12px 18px;
-  border-radius: 8px;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
   border: 1px solid transparent;
@@ -137,7 +138,7 @@ h1 {
 
 .button.secondary {
   color: var(--ink);
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.72);
   border-color: var(--line);
 }
 
@@ -149,10 +150,10 @@ h1 {
 
 .product-screenshot {
   display: block;
-  width: min(100%, 560px);
-  max-height: min(74svh, 760px);
+  width: min(100%, 500px);
+  max-height: min(68svh, 650px);
   object-fit: contain;
-  filter: drop-shadow(0 28px 58px rgba(25, 39, 52, 0.24));
+  filter: drop-shadow(0 32px 58px rgba(0, 0, 0, 0.22));
 }
 
 .feature-band {
@@ -165,8 +166,8 @@ h1 {
 }
 
 .feature {
-  min-height: 210px;
-  padding: 34px;
+  min-height: 146px;
+  padding: 28px 32px;
   background: var(--surface);
 }
 
@@ -174,7 +175,7 @@ h1 {
 .policy h2,
 .content-list h2 {
   margin: 0 0 10px;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 0;
 }
 
@@ -233,6 +234,15 @@ h1 {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+    text-align: center;
+  }
+
+  .hero-copy {
+    justify-self: center;
+  }
+
+  .actions {
+    justify-content: center;
   }
 
   .feature-band {
@@ -252,6 +262,6 @@ h1 {
   }
 
   .product-screenshot {
-    max-height: 520px;
+    max-height: 440px;
   }
 }
