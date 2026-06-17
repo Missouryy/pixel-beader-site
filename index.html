@@ -3,43 +3,367 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Beader</title>
-  <meta name="description" content="Pixel Beader helps you design bead patterns, convert photos, preview fused finishes in 3D, and export snapshots.">
+  <title>Pixel Beader — Design & Preview Fuse Bead Art in 3D</title>
+  <meta name="description" content="Pixel Beader is an award-winning app that helps you design bead patterns, convert photos, preview fused finishes in 3D, and export snapshots.">
   <link rel="icon" href="assets/pixel-beader-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Pixel Beader home">
-      <img src="assets/pixel-beader-icon.png" alt="" class="brand-icon">
+      <img src="assets/pixel-beader-icon.png" alt="Pixel Beader Icon" class="brand-icon">
       <span>Pixel Beader</span>
     </a>
     <nav aria-label="Main navigation">
+      <a href="./" class="active">Home</a>
       <a href="./support/">Support</a>
       <a href="./privacy/">Privacy</a>
     </nav>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">For iPhone and iPad</p>
-        <h1>Pixel Beader</h1>
-        <p class="lead">Design bead art. Preview it in 3D.</p>
+        <div class="award-badge">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2c1.1 0 2 .9 2 2v2h2c1.66 0 3 1.34 3 3v2c0 2.21-1.79 4-4 4h-1.2c-.6 1.8-2.2 3-4.2 3s-3.6-1.2-4.2-3H6c-2.21 0-4-1.79-4-4V9c0-1.66 1.34-3 3-3h2V4c0-1.1.9-2 2-2h3zm5 6v3c0 1.1-.9 2-2 2h-1V8h3zm-8 0v5H8c-1.1 0-2-.9-2-2V8h3zM12 18c1.66 0 3-1.34 3-3V8H9v7c0 1.66 1.34 3 3 3zm-3 4h6v-2H9v2z"/>
+          </svg>
+          2026 Swift Student Challenge Winner
+        </div>
+        <h1>Design bead art. <span>Preview in 3D.</span></h1>
+        <p class="lead">Pixel Beader eliminates material waste and mess. Build beautiful fuse bead patterns, convert photos, and simulate realistic fused finishes on your iPad and iPhone.</p>
         <div class="actions">
-          <a class="button primary" href="./support/">Support</a>
-          <a class="button secondary" href="./privacy/">Privacy</a>
+          <a class="button primary" href="#playground">Try Bead Canvas</a>
+          <a class="button secondary" href="./support/">Email Support</a>
         </div>
       </div>
       <div class="product-visual">
-        <img class="product-screenshot" src="assets/pixel-beader-preview.png" alt="Pixel Beader running on iPad with a colorful bead pattern in the editor.">
+        <div class="mockup-container">
+          <img class="product-screenshot" src="assets/pixel-beader-preview.png" alt="Pixel Beader iPad App screenshot showing the circular bead canvas and 3D preview options.">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="section-title-wrap">
+        <span class="section-tag">Powerful Features</span>
+        <h2 class="section-title">Designed for Digital Bead Artists</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Photo to Bead Art</h3>
+          <p>Import any image and watch it convert automatically into a clear, grid-perfect bead blueprint with smart color matching.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3>3D Fused Simulation</h3>
+          <p>Utilizes Apple Metal to simulate the ironing (fusing) process. Preview exactly how your melted beads will look in a real 3D model.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19C4.85857 19 6.5 17.5 7.5 16C8.5 14.5 10 15 11 16C12 17 11.5 19 10 20C8.5 21 7.5 22 12 22Z"></path>
+              <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"></circle>
+              <circle cx="15.5" cy="14.5" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3>200+ Bead Palette</h3>
+          <p>Color-matched palette library matching popular real-world bead brands, making it simple to buy physical colors and start crafting.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <h3>Pencil Precision</h3>
+          <p>Optimized for Apple Pencil on iPad. Effortlessly pan, zoom, draw, and erase on large grids with precise hardware accuracy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bead Playground Section -->
+    <section class="playground-section" id="playground">
+      <div class="playground-grid container">
+        <div class="playground-copy">
+          <span class="section-tag">Interactive Preview</span>
+          <h2 class="section-title" style="margin-bottom: 1.5rem;">Try the Bead Canvas</h2>
+          <p class="lead" style="color: var(--text-muted); margin-bottom: 2rem;">Experience the magic of Pixel Beader in your browser! Pick a bead color and paint on the pegboard below. When you're ready, click "Fuse/Iron Beads" to simulate the melting process.</p>
+          <div class="spec-list">
+            <div class="spec-item">
+              <div class="spec-number">1</div>
+              <div class="spec-text">
+                <h3>Select a bead color</h3>
+                <p>Pick from standard vibrant craft colors.</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-number">2</div>
+              <div class="spec-text">
+                <h3>Paint on the board</h3>
+                <p>Click and drag or touch-drag on the grid circles.</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-number">3</div>
+              <div class="spec-text">
+                <h3>Apply Heat</h3>
+                <p>Click "Fuse" to watch them melt together like real Perler beads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="playground-interactive">
+          <div class="pegboard-wrapper">
+            <div class="pegboard" id="pegboard"></div>
+          </div>
+          <div class="palette-container">
+            <div class="palette-title">Color Palette</div>
+            <div class="color-palette">
+              <div class="color-swatch selected" data-color="#ff3b30" style="background: var(--bead-red); --color-swatch-val: var(--bead-red);"></div>
+              <div class="color-swatch" data-color="#ff9500" style="background: var(--bead-orange); --color-swatch-val: var(--bead-orange);"></div>
+              <div class="color-swatch" data-color="#ffcc00" style="background: var(--bead-yellow); --color-swatch-val: var(--bead-yellow);"></div>
+              <div class="color-swatch" data-color="#34c759" style="background: var(--bead-green); --color-swatch-val: var(--bead-green);"></div>
+              <div class="color-swatch" data-color="#007aff" style="background: var(--bead-blue); --color-swatch-val: var(--bead-blue);"></div>
+              <div class="color-swatch" data-color="#af52de" style="background: var(--bead-purple); --color-swatch-val: var(--bead-purple);"></div>
+              <div class="color-swatch" data-color="#ff2d55" style="background: var(--bead-pink); --color-swatch-val: var(--bead-pink);"></div>
+              <div class="color-swatch" data-color="#f2f2f7" style="background: var(--bead-white); --color-swatch-val: var(--bead-white);"></div>
+              <div class="color-swatch" data-color="#1c1c1e" style="background: var(--bead-black); --color-swatch-val: var(--bead-black);"></div>
+            </div>
+          </div>
+          <div class="playground-controls">
+            <button class="playground-btn fuse-btn" id="fuse-btn">Fuse/Iron Beads</button>
+            <button class="playground-btn clear-btn" id="clear-btn">Clear Board</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Specs Section -->
+    <section class="info-section container">
+      <div class="info-cards">
+        <div class="info-details">
+          <h2>Application Information</h2>
+          <div class="spec-list">
+            <div class="spec-item">
+              <div class="spec-number">✓</div>
+              <div class="spec-text">
+                <h3>Compatibility</h3>
+                <p>Designed and optimized for iPadOS 17.0+ and iOS 17.0+.</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-number">✓</div>
+              <div class="spec-text">
+                <h3>Apple Pencil Support</h3>
+                <p>Supports double-tap tool changes and pressure-sensitive zoom levels.</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <div class="spec-number">✓</div>
+              <div class="spec-text">
+                <h3>Offline First</h3>
+                <p>All photo conversions and 3D modeling computations run entirely on-device, keeping your creativity private and functional anywhere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-sidebar">
+          <div class="sidebar-card">
+            <h3>App Support</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Need help or have feature requests? Reach out via email.</p>
+            <a class="button primary" href="./support/" style="padding: 10px 20px; font-size: 0.9rem; width: 100%;">Contact Support</a>
+          </div>
+          <div class="sidebar-card">
+            <h3>Privacy Summary</h3>
+            <ul>
+              <li>No personal tracking</li>
+              <li>No third-party SDKs</li>
+              <li>Fully GDPR compliant</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>© 2026 Pixel Beader</span>
-    <span><a href="./support/">Support</a> · <a href="./privacy/">Privacy</a></span>
+    <span>&copy; 2026 Pixel Beader. Created by Yan Yu.</span>
+    <div class="footer-nav">
+      <a href="./support/">Support</a>
+      <a href="./privacy/">Privacy</a>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const pegboard = document.getElementById('pegboard');
+      const swatches = document.querySelectorAll('.color-swatch');
+      const fuseBtn = document.getElementById('fuse-btn');
+      const clearBtn = document.getElementById('clear-btn');
+      
+      let selectedColor = '#ff3b30'; // default red
+      let isDrawing = false;
+      let isFused = false;
+      let isPaintMode = true; // true = paint, false = erase
+
+      // Pre-paint a symmetric heart on the 12x12 pegboard (0-143)
+      const heartIndices = [
+        26, 27, 28, 31, 32, 33, 
+        37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 
+        49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+        62, 63, 64, 65, 66, 67, 68, 69, 
+        75, 76, 77, 78, 79, 80, 
+        88, 89, 90, 91, 
+        101, 102
+      ];
+
+      // Initialize pegboard grid (12x12 = 144 pegs)
+      const gridWidth = 12;
+      const gridHeight = 12;
+      for (let i = 0; i < gridWidth * gridHeight; i++) {
+        const peg = document.createElement('div');
+        peg.classList.add('bead-peg');
+        
+        // Pre-paint heart shape
+        if (heartIndices.includes(i)) {
+          peg.classList.add('active-bead');
+          peg.style.setProperty('--bead-color', '#ff3b30');
+        }
+
+        // Mouse drawing events
+        peg.addEventListener('mousedown', (e) => {
+          handleStart(peg);
+        });
+
+        peg.addEventListener('mouseenter', () => {
+          handleMove(peg);
+        });
+
+        pegboard.appendChild(peg);
+      }
+
+      // Handle global mouse release
+      window.addEventListener('mouseup', () => {
+        isDrawing = false;
+      });
+
+      // Touch paint support for mobile/tablet screens
+      pegboard.addEventListener('touchstart', (e) => {
+        if (isFused) return;
+        isDrawing = true;
+        const touch = e.touches[0];
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target && target.classList.contains('bead-peg')) {
+          handleStart(target);
+        }
+        e.preventDefault();
+      }, { passive: false });
+
+      pegboard.addEventListener('touchmove', (e) => {
+        if (!isDrawing || isFused) return;
+        const touch = e.touches[0];
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target && target.classList.contains('bead-peg')) {
+          handleMove(target);
+        }
+        e.preventDefault();
+      }, { passive: false });
+
+      window.addEventListener('touchend', () => {
+        isDrawing = false;
+      });
+
+      function handleStart(peg) {
+        if (isFused) return;
+        isDrawing = true;
+        if (peg.classList.contains('active-bead') && peg.style.getPropertyValue('--bead-color') === selectedColor) {
+          isPaintMode = false;
+          eraseBead(peg);
+        } else {
+          isPaintMode = true;
+          paintBead(peg);
+        }
+      }
+
+      function handleMove(peg) {
+        if (!isDrawing || isFused) return;
+        if (isPaintMode) {
+          paintBead(peg);
+        } else {
+          eraseBead(peg);
+        }
+      }
+
+      function paintBead(peg) {
+        peg.classList.add('active-bead');
+        peg.style.setProperty('--bead-color', selectedColor);
+      }
+
+      function eraseBead(peg) {
+        peg.classList.remove('active-bead');
+        peg.style.removeProperty('--bead-color');
+      }
+
+      // Handle color swatches click
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', () => {
+          if (isFused) return;
+          swatches.forEach(s => s.classList.remove('selected'));
+          swatch.classList.add('selected');
+          selectedColor = swatch.getAttribute('data-color');
+        });
+      });
+
+      // Handle Fuse / Melt Action
+      fuseBtn.addEventListener('click', () => {
+        isFused = !isFused;
+        if (isFused) {
+          pegboard.classList.add('fused');
+          fuseBtn.textContent = 'Unfuse Art';
+          fuseBtn.style.background = 'linear-gradient(135deg, var(--accent-green), #27ae60)';
+        } else {
+          pegboard.classList.remove('fused');
+          fuseBtn.textContent = 'Fuse/Iron Beads';
+          fuseBtn.style.background = 'var(--accent-gradient)';
+        }
+      });
+
+      // Handle Clear Action
+      clearBtn.addEventListener('click', () => {
+        const pegs = pegboard.querySelectorAll('.bead-peg');
+        pegs.forEach(peg => {
+          peg.classList.remove('active-bead');
+          peg.style.removeProperty('--bead-color');
+        });
+        isFused = false;
+        pegboard.classList.remove('fused');
+        fuseBtn.textContent = 'Fuse/Iron Beads';
+        fuseBtn.style.background = 'var(--accent-gradient)';
+      });
+    });
+  </script>
 </body>
 </html>
