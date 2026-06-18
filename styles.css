@@ -211,6 +211,12 @@ nav a.active, nav a:hover {
   color: var(--text-color);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* Hero Section */
 .hero {
   display: grid;
