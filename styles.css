@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
-
 /* CSS Variables */
 :root {
   color-scheme: dark;
   
   /* Fonts */
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "SF Compact Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", "SF Compact Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "SF Pro Display", "PingFang SC", "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "SF Pro Text", "PingFang SC", "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --font-serif: Georgia, serif;
   
   /* Color Palette - Gallery Theme (High-contrast Dark) */
@@ -111,8 +109,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.5;
-  font-weight: 300; /* Light sans-serif by default */
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  letter-spacing: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s, color 0.3s;
@@ -139,7 +137,7 @@ a:hover {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   color: var(--text-color);
   text-transform: none; /* keep original case */
 }
@@ -177,8 +175,8 @@ a:hover {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 1.05rem;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .brand-icon {
@@ -198,8 +196,8 @@ nav {
   gap: 2rem;
   font-size: 0.75rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   opacity: 0.85;
 }
 
@@ -220,11 +218,11 @@ nav a.active, nav a:hover {
 /* Hero Section */
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.85fr 1.15fr;
   align-items: center;
-  gap: 4.5rem;
-  padding: 7rem 2rem 9rem;
-  max-width: 960px;
+  gap: 3rem;
+  padding: 7rem 2rem 8rem;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -234,88 +232,45 @@ nav a.active, nav a:hover {
   align-items: flex-start;
 }
 
-/* Apple Symmetrical Laurel Wreath Award Badge */
-.award-laurel {
+.award-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 1.75rem;
-}
-
-.laurel-branch {
-  width: 32px;
-  height: 40px;
-  color: var(--gold-color);
-  opacity: 1; /* full brightness for metallic shine */
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.laurel-branch:hover {
-  transform: scale(1.08);
-}
-
-.laurel-branch.laurel-right {
-  transform: scaleX(-1);
-}
-
-.laurel-branch.laurel-right:hover {
-  transform: scaleX(-1) scale(1.08);
-}
-
-/* Default/Dark Mode Gold Gradient */
-.laurel-stem {
-  stroke: url(#apple-gold-grad-dark);
-}
-.laurel-leaf {
-  fill: url(#apple-gold-grad-dark);
-}
-
-/* Light Mode Gold Gradient Override */
-.light-theme .laurel-stem {
-  stroke: url(#apple-gold-grad-light);
-}
-.light-theme .laurel-leaf {
-  fill: url(#apple-gold-grad-light);
-}
-
-.award-text {
+  gap: 10px;
   font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.4;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
   color: var(--gold-color);
-  
-  /* Apply beautiful metal gold gradient */
-  background: linear-gradient(135deg, #FFE082 0%, #E5C158 50%, #C5A030 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--gold-color) 48%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--gold-color) 8%, transparent);
+  margin-bottom: 1.7rem;
+  white-space: nowrap;
 }
 
-/* Light Theme Text Gradient Override */
-.light-theme .award-text {
-  background: linear-gradient(135deg, #D4AF37 0%, #B38938 50%, #7A5813 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.award-year {
+  color: var(--text-color);
+  opacity: 0.72;
 }
 
-.award-text strong {
-  font-weight: 700;
-  display: block;
-  font-size: 0.75rem;
-  margin-top: 1px;
+.award-name {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.award-badge strong {
+  color: var(--gold-color);
+  font-weight: 650;
 }
 
 .hero-copy h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-size: 3.35rem;
   line-height: 1.1;
-  font-weight: 200; /* Very light sans-serif */
-  letter-spacing: -0.025em;
+  font-weight: 650;
+  letter-spacing: 0;
   margin-bottom: 1.5rem;
   color: var(--text-color);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -326,14 +281,14 @@ nav a.active, nav a:hover {
 }
 
 .hero-copy h1 span {
-  display: block;
+  display: inline;
   font-weight: 400;
 }
 
 .hero-copy .lead {
-  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
+  font-size: 1.12rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text-muted);
   margin-bottom: 2.75rem;
   max-width: 440px;
@@ -353,8 +308,8 @@ nav a.active, nav a:hover {
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   padding: 9px 18px;
   border-radius: 980px;
   cursor: pointer;
@@ -383,8 +338,8 @@ nav a.active, nav a:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .button-link:hover {
@@ -425,13 +380,13 @@ nav a.active, nav a:hover {
 .product-screenshot {
   display: block;
   width: 100%;
-  max-width: 380px;
-  box-shadow: var(--hero-shadow);
+  max-width: 720px;
+  filter: drop-shadow(0 26px 42px rgba(0, 0, 0, 0.18));
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-screenshot:hover {
-  transform: translateY(-4px) rotate(-0.5deg);
+  transform: translateY(-4px);
 }
 
 /* Features Grid (Gap-px Borders) */
@@ -457,7 +412,7 @@ nav a.active, nav a:hover {
   font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
   display: block;
@@ -465,9 +420,9 @@ nav a.active, nav a:hover {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  font-weight: 200;
-  letter-spacing: -0.02em;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0;
   color: var(--text-color);
 }
 
@@ -510,28 +465,28 @@ nav a.active, nav a:hover {
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: var(--text-color);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .feature-card p {
   color: var(--text-muted);
   font-size: 0.85rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Showcase Screenshot Grid (Borderless Cards) */
 .showcase-section {
-  padding: 7rem 2rem;
-  max-width: 960px;
+  padding: 6.5rem 2rem 7rem;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
 .showcase-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem;
-  margin-top: 4rem;
+  gap: 4rem;
+  margin-top: 3.25rem;
 }
 
 .showcase-card {
@@ -542,12 +497,19 @@ nav a.active, nav a:hover {
 /* Borderless Showcase Image */
 .showcase-card img {
   width: 100%;
-  box-shadow: var(--card-shadow);
+  display: block;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.light-theme .showcase-card img {
+  mix-blend-mode: multiply;
+}
+
 .showcase-card img:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-4px);
 }
 
 .showcase-info {
@@ -562,7 +524,7 @@ nav a.active, nav a:hover {
 .showcase-info h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
@@ -570,7 +532,7 @@ nav a.active, nav a:hover {
   color: var(--text-muted);
   font-size: 0.85rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Specs/Compatibility Section */
@@ -592,9 +554,9 @@ nav a.active, nav a:hover {
 .info-details h2 {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  font-weight: 200;
+  font-weight: 600;
   margin-bottom: 2.25rem;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
 }
 
 .spec-list {
@@ -627,7 +589,7 @@ nav a.active, nav a:hover {
 .spec-text p {
   color: var(--text-muted);
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .info-sidebar {
@@ -654,11 +616,11 @@ nav a.active, nav a:hover {
   font-weight: 400;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .sidebar-card p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .sidebar-card ul {
@@ -674,7 +636,7 @@ nav a.active, nav a:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .sidebar-card li::before {
@@ -701,23 +663,23 @@ nav a.active, nav a:hover {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--text-muted);
-  letter-spacing: 2px;
+  letter-spacing: 0;
   margin-bottom: 0.75rem;
   display: block;
 }
 
 .page-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 200;
-  letter-spacing: -0.02em;
+  font-size: 3rem;
+  font-weight: 650;
+  letter-spacing: 0;
   margin-bottom: 1rem;
 }
 
 .page-hero .lead {
   font-size: 1.05rem;
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .page-content {
@@ -734,7 +696,7 @@ nav a.active, nav a:hover {
   font-weight: 400;
   margin-bottom: 1.25rem;
   color: var(--text-color);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .page-content p {
@@ -742,7 +704,7 @@ nav a.active, nav a:hover {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .page-content ul {
@@ -754,7 +716,7 @@ nav a.active, nav a:hover {
 .page-content li {
   margin-bottom: 0.6rem;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .page-content a {
@@ -773,8 +735,8 @@ nav a.active, nav a:hover {
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.72rem;
-  font-weight: 300;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .footer-nav {
@@ -783,8 +745,8 @@ nav a.active, nav a:hover {
 }
 
 .footer-nav a {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .footer-nav a:hover {
@@ -804,6 +766,11 @@ nav a.active, nav a:hover {
   .hero-copy {
     align-items: center;
   }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: 2.65rem;
+  }
   
   .hero-copy .lead {
     margin-left: auto;
@@ -820,7 +787,7 @@ nav a.active, nav a:hover {
   }
   
   .product-screenshot {
-    max-width: 320px;
+    max-width: min(680px, 92vw);
   }
   
   .showcase-grid {
@@ -852,6 +819,17 @@ nav a.active, nav a:hover {
   nav {
     gap: 1rem;
   }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .award-badge {
+    gap: 7px;
+    padding: 7px 10px;
+    font-size: 0.72rem;
+  }
   
   .nav-actions {
     gap: 0.75rem;
@@ -868,6 +846,3 @@ nav a.active, nav a:hover {
     justify-content: center;
   }
 }
-
-
-
