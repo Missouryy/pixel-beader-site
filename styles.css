@@ -21,7 +21,7 @@
   --accent-color: #f5f5f5;
   --accent-hover: #ffffff;
   --accent-active: #dcdcdc;
-  --gold-color: #d4af37; /* desaturated brass/champagne gold */
+  --gold-color: #e5c158; /* Apple premium champagne gold */
   
   /* Layout variables */
   --card-bg: #121212;
@@ -29,6 +29,68 @@
   --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   --hero-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   --nav-bg: rgba(11, 11, 11, 0.85);
+}
+
+/* Light Theme Variables */
+.light-theme {
+  color-scheme: light;
+  
+  --bg-color: #f5f5f7; /* Apple signature light gray background */
+  --bg-secondary: #ffffff;
+  --text-color: #1d1d1f; /* Apple dark text */
+  --text-muted: #86868b; /* Apple muted gray text */
+  --border-color: #e5e5ea;
+  --border-color-hover: #d2d2d7;
+  
+  --accent-color: #1d1d1f;
+  --accent-hover: #000000;
+  --accent-active: #515154;
+  --gold-color: #b38938; /* darker gold for readability on light bg */
+  
+  --card-bg: #ffffff;
+  --card-bg-hover: #f5f5f7;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  --hero-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  --nav-bg: rgba(245, 245, 247, 0.85);
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--border-color);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Toggle visibility between Sun and Moon based on active theme class */
+.light-theme .sun-icon {
+  display: none;
+}
+.light-theme .moon-icon {
+  display: block;
+}
+
+.dark-theme .sun-icon {
+  display: block;
+}
+.dark-theme .moon-icon {
+  display: none;
 }
 
 /* Global Reset & Base Styles */
@@ -166,24 +228,49 @@ nav a.active, nav a:hover {
   align-items: flex-start;
 }
 
-/* Apple Outline Laurel Wreath Award Badge */
+/* Apple Symmetrical Laurel Wreath Award Badge */
 .award-laurel {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 1.75rem;
 }
 
 .laurel-branch {
-  width: 28px;
-  height: 36px;
+  width: 32px;
+  height: 40px;
   color: var(--gold-color);
-  opacity: 0.8;
+  opacity: 1; /* full brightness for metallic shine */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.laurel-right {
+.laurel-branch:hover {
+  transform: scale(1.08);
+}
+
+.laurel-branch.laurel-right {
   transform: scaleX(-1);
+}
+
+.laurel-branch.laurel-right:hover {
+  transform: scaleX(-1) scale(1.08);
+}
+
+/* Default/Dark Mode Gold Gradient */
+.laurel-stem {
+  stroke: url(#apple-gold-grad-dark);
+}
+.laurel-leaf {
+  fill: url(#apple-gold-grad-dark);
+}
+
+/* Light Mode Gold Gradient Override */
+.light-theme .laurel-stem {
+  stroke: url(#apple-gold-grad-light);
+}
+.light-theme .laurel-leaf {
+  fill: url(#apple-gold-grad-light);
 }
 
 .award-text {
@@ -192,9 +279,22 @@ nav a.active, nav a:hover {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-color);
   text-align: center;
   line-height: 1.4;
+  color: var(--gold-color);
+  
+  /* Apply beautiful metal gold gradient */
+  background: linear-gradient(135deg, #FFE082 0%, #E5C158 50%, #C5A030 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s;
+}
+
+/* Light Theme Text Gradient Override */
+.light-theme .award-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #B38938 50%, #7A5813 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .award-text strong {

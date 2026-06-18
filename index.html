@@ -48,32 +48,50 @@
     <section class="hero">
       <div class="hero-copy">
         <div class="award-laurel">
-          <svg class="laurel-branch" viewBox="0 0 32 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-            <path d="M 26,35 C 16,35 8,27 8,12" />
-            <path d="M 8,8 C 8,5 11,3 11,3 C 11,3 13,6 9,8 Z" />
-            <path d="M 4.5,14 C 2,12 1.5,8 1.5,8 C 1.5,8 4.5,8.5 6,12 Z" />
-            <path d="M 12.5,13.5 C 15,11.5 15.5,7.5 15.5,7.5 C 15.5,7.5 12.5,8 11,11.5 Z" />
-            <path d="M 6,20.5 C 3.5,19 3,15 3,15 C 3,15 6,15.5 7.5,18.5 Z" />
-            <path d="M 15.5,19.5 C 18,18 18.5,14 18.5,14 C 18.5,14 15.5,14.5 14,17.5 Z" />
-            <path d="M 10,27.5 C 7.5,26.5 7,22.5 7,22.5 C 7,22.5 10,23 11.5,25.5 Z" />
-            <path d="M 20,26 C 22.5,25 23,21 23,21 C 23,21 20,21.5 18.5,24 Z" />
-            <path d="M 16,34 C 13.5,33.5 13,29.5 13,29.5 C 13,29.5 16,30 17.5,32 Z" />
-            <path d="M 26.5,32 C 29,31.5 29.5,27.5 29.5,27.5 C 29.5,27.5 26.5,28 25,30.5 Z" />
+          <svg class="laurel-branch" viewBox="0 0 32 40">
+            <defs>
+              <!-- Dark mode gold gradient -->
+              <linearGradient id="apple-gold-grad-dark" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#B38938" />
+                <stop offset="50%" stop-color="#E5C158" />
+                <stop offset="100%" stop-color="#FCE69C" />
+              </linearGradient>
+              <!-- Light mode gold gradient -->
+              <linearGradient id="apple-gold-grad-light" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7A5813" />
+                <stop offset="50%" stop-color="#B38938" />
+                <stop offset="100%" stop-color="#D4AF37" />
+              </linearGradient>
+            </defs>
+            <path class="laurel-stem" d="M 26 36 Q 8 32 8 6" fill="none" />
+            <path class="laurel-leaf" d="M 21.00,34.30 Q 20.85,31.48 18.43,29.13 Q 18.84,32.48 21.00,34.30 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 21.00,34.30 Q 18.78,33.18 15.93,33.99 Q 18.66,35.15 21.00,34.30 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 16.32,31.19 Q 16.92,28.66 15.41,25.96 Q 14.90,29.01 16.32,31.19 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 16.32,31.19 Q 14.66,29.62 11.94,29.59 Q 14.04,31.32 16.32,31.19 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 12.68,26.80 Q 13.84,24.74 13.20,21.99 Q 11.98,24.54 12.68,26.80 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 12.68,26.80 Q 11.62,25.00 9.25,24.29 Q 10.65,26.33 12.68,26.80 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 10.08,21.14 Q 11.54,19.57 11.55,17.03 Q 9.95,19.01 10.08,21.14 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 10.08,21.14 Q 9.53,19.34 7.60,18.21 Q 8.40,20.30 10.08,21.14 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.52,14.20 Q 10.05,13.07 10.47,10.85 Q 8.75,12.32 8.52,14.20 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.52,14.20 Q 8.33,12.54 6.82,11.24 Q 7.18,13.20 8.52,14.20 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.01,7.03 Q 8.66,5.46 7.96,3.57 Q 7.31,5.48 8.01,7.03 Z" fill="currentColor" />
           </svg>
           <div class="award-text">
             Swift Student Challenge<br><strong>Distinguished Winner</strong>
           </div>
-          <svg class="laurel-branch laurel-right" viewBox="0 0 32 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-            <path d="M 26,35 C 16,35 8,27 8,12" />
-            <path d="M 8,8 C 8,5 11,3 11,3 C 11,3 13,6 9,8 Z" />
-            <path d="M 4.5,14 C 2,12 1.5,8 1.5,8 C 1.5,8 4.5,8.5 6,12 Z" />
-            <path d="M 12.5,13.5 C 15,11.5 15.5,7.5 15.5,7.5 C 15.5,7.5 12.5,8 11,11.5 Z" />
-            <path d="M 6,20.5 C 3.5,19 3,15 3,15 C 3,15 6,15.5 7.5,18.5 Z" />
-            <path d="M 15.5,19.5 C 18,18 18.5,14 18.5,14 C 18.5,14 15.5,14.5 14,17.5 Z" />
-            <path d="M 10,27.5 C 7.5,26.5 7,22.5 7,22.5 C 7,22.5 10,23 11.5,25.5 Z" />
-            <path d="M 20,26 C 22.5,25 23,21 23,21 C 23,21 20,21.5 18.5,24 Z" />
-            <path d="M 16,34 C 13.5,33.5 13,29.5 13,29.5 C 13,29.5 16,30 17.5,32 Z" />
-            <path d="M 26.5,32 C 29,31.5 29.5,27.5 29.5,27.5 C 29.5,27.5 26.5,28 25,30.5 Z" />
+          <svg class="laurel-branch laurel-right" viewBox="0 0 32 40">
+            <path class="laurel-stem" d="M 26 36 Q 8 32 8 6" fill="none" />
+            <path class="laurel-leaf" d="M 21.00,34.30 Q 20.85,31.48 18.43,29.13 Q 18.84,32.48 21.00,34.30 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 21.00,34.30 Q 18.78,33.18 15.93,33.99 Q 18.66,35.15 21.00,34.30 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 16.32,31.19 Q 16.92,28.66 15.41,25.96 Q 14.90,29.01 16.32,31.19 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 16.32,31.19 Q 14.66,29.62 11.94,29.59 Q 14.04,31.32 16.32,31.19 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 12.68,26.80 Q 13.84,24.74 13.20,21.99 Q 11.98,24.54 12.68,26.80 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 12.68,26.80 Q 11.62,25.00 9.25,24.29 Q 10.65,26.33 12.68,26.80 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 10.08,21.14 Q 11.54,19.57 11.55,17.03 Q 9.95,19.01 10.08,21.14 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 10.08,21.14 Q 9.53,19.34 7.60,18.21 Q 8.40,20.30 10.08,21.14 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.52,14.20 Q 10.05,13.07 10.47,10.85 Q 8.75,12.32 8.52,14.20 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.52,14.20 Q 8.33,12.54 6.82,11.24 Q 7.18,13.20 8.52,14.20 Z" fill="currentColor" />
+            <path class="laurel-leaf" d="M 8.01,7.03 Q 8.66,5.46 7.96,3.57 Q 7.31,5.48 8.01,7.03 Z" fill="currentColor" />
           </svg>
         </div>
         <h1>Design bead art. <span class="serif-italic">Preview in 3D.</span></h1>
