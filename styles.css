@@ -3,9 +3,9 @@
   color-scheme: dark;
   
   /* Fonts */
-  --font-display: "SF Pro Display", "PingFang SC", "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --font-body: "SF Pro Text", "PingFang SC", "Avenir Next", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: Georgia, serif;
+  --font-display: "SF Pro Display", "SF Pro", -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "SF Pro Text", "SF Pro", -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Ogg", "Ogg Text", Georgia, serif;
   
   /* Color Palette - Gallery Theme (High-contrast Dark) */
   --bg-color: #0b0b0b;
@@ -135,7 +135,7 @@ a:hover {
 /* Vogue Serif Italic helper */
 .serif-italic {
   font-family: var(--font-serif);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--text-color);
@@ -232,6 +232,43 @@ nav a.active, nav a:hover {
   align-items: flex-start;
 }
 
+.award-laurel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-color);
+  margin-bottom: 1.7rem;
+}
+
+.award-branch {
+  width: 30px;
+  height: 38px;
+  flex: 0 0 auto;
+  color: var(--gold-color);
+}
+
+.award-branch-right {
+  transform: scaleX(-1);
+}
+
+.award-stem,
+.award-leaf {
+  vector-effect: non-scaling-stroke;
+}
+
+.award-stem {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  opacity: 0.72;
+}
+
+.award-leaf {
+  fill: currentColor;
+  opacity: 0.92;
+}
+
 .award-badge {
   display: inline-flex;
   align-items: center;
@@ -246,7 +283,6 @@ nav a.active, nav a:hover {
   border: 1px solid color-mix(in srgb, var(--gold-color) 48%, transparent);
   border-radius: 999px;
   background: color-mix(in srgb, var(--gold-color) 8%, transparent);
-  margin-bottom: 1.7rem;
   white-space: nowrap;
 }
 
@@ -502,10 +538,6 @@ nav a.active, nav a:hover {
   border: 0;
   box-shadow: none;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.light-theme .showcase-card img {
-  mix-blend-mode: multiply;
 }
 
 .showcase-card img:hover {
@@ -829,6 +861,11 @@ nav a.active, nav a:hover {
     gap: 7px;
     padding: 7px 10px;
     font-size: 0.72rem;
+  }
+
+  .award-branch {
+    width: 24px;
+    height: 32px;
   }
   
   .nav-actions {
