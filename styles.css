@@ -236,14 +236,14 @@ nav a.active, nav a:hover {
 .award-laurel {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   color: var(--gold-color);
-  margin-bottom: 1.85rem;
+  margin-bottom: 2rem;
 }
 
 .award-branch {
-  width: 22px;
-  height: 30px;
+  width: 28px;
+  height: 38px;
   flex: 0 0 auto;
   color: var(--gold-color);
   opacity: 0.9;
@@ -274,9 +274,9 @@ nav a.active, nav a:hover {
 .award-badge {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 13px;
   font-family: var(--font-display);
-  font-size: 0.76rem;
+  font-size: 1.24rem;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1;
@@ -398,6 +398,12 @@ nav a.active, nav a:hover {
   display: block;
   width: 100%;
   max-width: 720px;
+  transform-origin: center;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-screenshot:hover {
+  transform: translateY(-4px) scale(1.008);
 }
 
 /* Features Grid (Gap-px Borders) */
@@ -799,6 +805,20 @@ nav a.active, nav a:hover {
   .product-screenshot {
     max-width: min(680px, 92vw);
   }
+
+  .award-laurel {
+    gap: 12px;
+  }
+
+  .award-badge {
+    gap: 9px;
+    font-size: 1rem;
+  }
+
+  .award-branch {
+    width: 24px;
+    height: 32px;
+  }
   
   .showcase-grid {
     grid-template-columns: 1fr;
@@ -837,12 +857,12 @@ nav a.active, nav a:hover {
 
   .award-badge {
     gap: 6px;
-    font-size: 0.68rem;
+    font-size: 0.82rem;
   }
 
   .award-branch {
-    width: 18px;
-    height: 25px;
+    width: 20px;
+    height: 28px;
   }
   
   .nav-actions {
