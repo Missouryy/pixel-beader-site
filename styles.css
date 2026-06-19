@@ -272,9 +272,9 @@ nav a.active, nav a:hover {
 
 .award-badge {
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.28rem;
+  gap: 1.25rem;
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
@@ -288,21 +288,19 @@ nav a.active, nav a:hover {
   white-space: nowrap;
 }
 
-.award-event,
-.award-winner-row {
-  display: inline-flex;
+.award-text-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 0.35rem;
 }
 
 .award-event {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.65rem;
   font-size: 1.08rem;
-}
-
-.award-winner-row {
-  gap: 1.15rem;
-  align-items: center;
 }
 
 .award-year {
@@ -826,6 +824,10 @@ nav a.active, nav a:hover {
   }
 
   .award-badge {
+    gap: 0.75rem;
+  }
+
+  .award-text-content {
     gap: 0.22rem;
   }
 
@@ -834,17 +836,13 @@ nav a.active, nav a:hover {
     font-size: 0.98rem;
   }
 
-  .award-winner-row {
-    gap: 0.75rem;
-  }
-
   .award-badge strong {
     font-size: 1.24rem;
   }
 
   .award-branch {
-    width: 24px;
-    height: 32px;
+    width: 26px;
+    height: 38px;
   }
   
   .showcase-grid {
@@ -883,6 +881,10 @@ nav a.active, nav a:hover {
   }
 
   .award-badge {
+    gap: 0.5rem;
+  }
+
+  .award-text-content {
     gap: 0.18rem;
   }
 
@@ -891,17 +893,13 @@ nav a.active, nav a:hover {
     font-size: 0.74rem;
   }
 
-  .award-winner-row {
-    gap: 0.45rem;
-  }
-
   .award-badge strong {
     font-size: 0.96rem;
   }
 
   .award-branch {
-    width: 18px;
-    height: 25px;
+    width: 20px;
+    height: 28px;
   }
   
   .nav-actions {
