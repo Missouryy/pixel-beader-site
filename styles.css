@@ -221,7 +221,8 @@ nav a.active, nav a:hover {
   grid-template-columns: 0.85fr 1.15fr;
   align-items: center;
   gap: 3rem;
-  padding: 7rem 2rem 8rem;
+  min-height: calc(100vh - 54px);
+  padding: 4rem 2rem 5rem;
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -235,16 +236,17 @@ nav a.active, nav a:hover {
 .award-laurel {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   color: var(--gold-color);
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.85rem;
 }
 
 .award-branch {
-  width: 30px;
-  height: 38px;
+  width: 22px;
+  height: 30px;
   flex: 0 0 auto;
   color: var(--gold-color);
+  opacity: 0.9;
 }
 
 .award-branch-right {
@@ -259,46 +261,46 @@ nav a.active, nav a:hover {
 .award-stem {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.35;
+  stroke-width: 1.15;
   stroke-linecap: round;
-  opacity: 0.72;
+  opacity: 0.58;
 }
 
 .award-leaf {
   fill: currentColor;
-  opacity: 0.92;
+  opacity: 0.78;
 }
 
 .award-badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1;
   color: var(--gold-color);
-  padding: 8px 12px;
-  border: 1px solid color-mix(in srgb, var(--gold-color) 48%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--gold-color) 8%, transparent);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   white-space: nowrap;
 }
 
 .award-year {
   color: var(--text-color);
-  opacity: 0.72;
+  opacity: 0.62;
 }
 
 .award-name {
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 520;
 }
 
 .award-badge strong {
   color: var(--gold-color);
-  font-weight: 650;
+  font-weight: 620;
 }
 
 .hero-copy h1 {
@@ -834,14 +836,13 @@ nav a.active, nav a:hover {
   }
 
   .award-badge {
-    gap: 7px;
-    padding: 7px 10px;
-    font-size: 0.72rem;
+    gap: 6px;
+    font-size: 0.68rem;
   }
 
   .award-branch {
-    width: 24px;
-    height: 32px;
+    width: 18px;
+    height: 25px;
   }
   
   .nav-actions {
