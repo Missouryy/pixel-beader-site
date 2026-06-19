@@ -161,7 +161,7 @@ a:hover {
 
 .header-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1216px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -240,15 +240,16 @@ nav a.active, nav a:hover {
 }
 
 .award-branch {
-  width: 30px;
-  height: 40px;
+  width: 38px;
+  height: 54px;
   flex: 0 0 auto;
   color: var(--gold-color);
   opacity: 0.9;
+  transform: translateY(-1px) rotate(-7deg);
 }
 
 .award-branch-right {
-  transform: scaleX(-1);
+  transform: translateY(-1px) scaleX(-1) rotate(-7deg);
 }
 
 .award-stem,
@@ -300,7 +301,8 @@ nav a.active, nav a:hover {
 }
 
 .award-winner-row {
-  gap: 0.9rem;
+  gap: 1.15rem;
+  align-items: center;
 }
 
 .award-year {
@@ -317,6 +319,7 @@ nav a.active, nav a:hover {
   color: var(--gold-color);
   font-size: 1.42rem;
   font-weight: 650;
+  line-height: 1.08;
 }
 
 .hero-copy h1 {
