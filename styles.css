@@ -173,7 +173,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0;
   text-transform: none;
@@ -304,7 +304,7 @@ nav a.active, nav a:hover {
 .hero-copy h1 {
   font-family: var(--font-display);
   font-size: 3.35rem;
-  line-height: 1.1;
+  line-height: 1.18;
   font-weight: 650;
   letter-spacing: 0;
   margin-bottom: 1.5rem;
@@ -385,27 +385,6 @@ nav a.active, nav a:hover {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Floating Line decoration (Bottom right of hero copy) */
-.hero-line-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 3.5rem;
-}
-
-.extending-line {
-  width: 60px;
-  height: 1px;
-  background-color: var(--border-color);
-  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.45s;
-}
-
-.hero-copy:hover .extending-line,
-.extending-line:hover {
-  width: 110px;
-  background-color: var(--text-color);
-}
-
 /* Hero Right Side - Image Only (Borderless) */
 .product-visual {
   display: flex;
@@ -417,12 +396,6 @@ nav a.active, nav a:hover {
   display: block;
   width: 100%;
   max-width: 720px;
-  filter: drop-shadow(0 26px 42px rgba(0, 0, 0, 0.18));
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.product-screenshot:hover {
-  transform: translateY(-4px);
 }
 
 /* Features Grid (Gap-px Borders) */
@@ -680,7 +653,7 @@ nav a.active, nav a:hover {
 /* Secondary Pages (Support/Privacy) */
 .page {
   padding: 7rem 2rem;
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -811,11 +784,6 @@ nav a.active, nav a:hover {
   
   .actions {
     justify-content: center;
-  }
-  
-  .hero-line-wrap {
-    justify-content: center;
-    margin-top: 2.5rem;
   }
   
   .product-screenshot {
