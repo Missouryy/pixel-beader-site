@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
   <title>Pixel Beader — Support & FAQ</title>
   <meta name="description" content="Get help, read common topics, or contact support for Pixel Beader.">
   <link rel="icon" href="../assets/pixel-beader-icon.png">
@@ -12,8 +13,8 @@
   <header class="site-header">
     <div class="header-container">
       <a class="brand" href="../" aria-label="Pixel Beader home">
-        <img src="../assets/pixel-beader-icon.png" alt="Pixel Beader Icon" class="brand-icon">
-        <span>Pixel Beader</span>
+        <img src="../assets/pixel-beader-icon.png" alt="" class="brand-icon">
+        <span>Pixel Beader<span class="brand-period">.</span></span>
       </a>
       <div class="nav-actions">
         <nav aria-label="Main navigation">
@@ -62,7 +63,7 @@
         No. Pixel Beader operates entirely offline. The photo-to-bead-art conversion and 3D Metal renders are computed locally on your iPad or iPhone, ensuring complete privacy.</p>
       </section>
 
-      <section style="margin-top: 3rem; text-align: center; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+      <section style="text-align: center;">
         <h2>Still need <span class="serif-italic">assistance?</span></h2>
         <p style="margin-bottom: 1.5rem; font-weight: 300;">If you have any other questions, feedback, or bugs to report, please send us an email.</p>
         <a class="button primary" href="mailto:missouryy@icloud.com?subject=Pixel%20Beader%20Support">Email Support</a>
@@ -78,31 +79,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.getElementById('theme-toggle');
-      
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
-      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        document.documentElement.classList.add('dark-theme');
-      } else {
-        document.documentElement.classList.add('light-theme');
-      }
-      
-      themeToggle.addEventListener('click', () => {
-        if (document.documentElement.classList.contains('dark-theme')) {
-          document.documentElement.classList.remove('dark-theme');
-          document.documentElement.classList.add('light-theme');
-          localStorage.setItem('theme', 'light');
-        } else {
-          document.documentElement.classList.remove('light-theme');
-          document.documentElement.classList.add('dark-theme');
-          localStorage.setItem('theme', 'dark');
-        }
-      });
-    });
-  </script>
+  <script src="../theme.js" defer></script>
 </body>
 </html>

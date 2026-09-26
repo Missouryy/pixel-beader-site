@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Beader — Design & Preview Fuse Bead Art in 3D</title>
-  <meta name="description" content="Pixel Beader is an award-winning app that helps you design bead patterns, convert photos, preview fused finishes in 3D, and export snapshots.">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>Pixel Beader — Turn little pixels into something wonderful</title>
+  <meta name="description" content="Draw bead art, turn photos into patterns, follow each bead, and preview your creations in 3D with Pixel Beader.">
   <link rel="icon" href="assets/pixel-beader-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,155 +13,95 @@
   <header class="site-header">
     <div class="header-container">
       <a class="brand" href="./" aria-label="Pixel Beader home">
-        <img src="assets/pixel-beader-icon.png" alt="Pixel Beader Icon" class="brand-icon">
-        <span>Pixel Beader</span>
+        <img src="assets/pixel-beader-icon.png" alt="" class="brand-icon">
+        <span>Pixel Beader<span class="brand-period">.</span></span>
       </a>
       <div class="nav-actions">
         <nav aria-label="Main navigation">
-          <a href="./" class="active">Home</a>
+          <a href="#features">Explore</a>
           <a href="./support/">Support</a>
           <a href="./privacy/">Privacy</a>
         </nav>
-        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
-          <!-- Sun icon (shown in dark mode) -->
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <!-- Moon icon (shown in light mode) -->
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="false" type="button">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="award-laurel" aria-label="2026 Swift Student Challenge Distinguished Winner">
-          <div class="award-badge">
-            <svg class="award-branch" viewBox="0 0 34 44" aria-hidden="true">
-              <path class="award-stem" d="M26 39C15 33 9 22 9 6"></path>
-              <path class="award-leaf" d="M18 33C14 33 11 31 9 28C13 27 16 28 18 33Z"></path>
-              <path class="award-leaf" d="M14 25C10 24 8 21 7 17C11 18 13 20 14 25Z"></path>
-              <path class="award-leaf" d="M11 16C8 14 7 11 8 7C11 9 12 12 11 16Z"></path>
-              <path class="award-leaf" d="M19 31C20 27 23 25 27 24C26 28 24 31 19 31Z"></path>
-              <path class="award-leaf" d="M14 22C16 18 19 16 23 17C21 21 18 23 14 22Z"></path>
-              <path class="award-leaf" d="M11 13C13 10 16 8 20 9C18 13 15 15 11 13Z"></path>
-            </svg>
-            <div class="award-text-content">
-              <div class="award-event">
-                <span class="award-year">2026</span>
-                <span class="award-name">Swift Student Challenge</span>
-              </div>
-              <strong class="award-winner">Distinguished Winner</strong>
-            </div>
-            <svg class="award-branch award-branch-right" viewBox="0 0 34 44" aria-hidden="true">
-              <path class="award-stem" d="M26 39C15 33 9 22 9 6"></path>
-              <path class="award-leaf" d="M18 33C14 33 11 31 9 28C13 27 16 28 18 33Z"></path>
-              <path class="award-leaf" d="M14 25C10 24 8 21 7 17C11 18 13 20 14 25Z"></path>
-              <path class="award-leaf" d="M11 16C8 14 7 11 8 7C11 9 12 12 11 16Z"></path>
-              <path class="award-leaf" d="M19 31C20 27 23 25 27 24C26 28 24 31 19 31Z"></path>
-              <path class="award-leaf" d="M14 22C16 18 19 16 23 17C21 21 18 23 14 22Z"></path>
-              <path class="award-leaf" d="M11 13C13 10 16 8 20 9C18 13 15 15 11 13Z"></path>
-            </svg>
-          </div>
-        </div>
-        <h1>Design bead art. <span class="serif-italic">Preview in 3D.</span></h1>
-        <p class="lead">Open Pixel Beader anytime, start creating, and enjoy it with your friends.</p>
+        <a class="award-pill" href="https://developer.apple.com/swift-student-challenge/" target="_blank" rel="noopener noreferrer" aria-label="2026 Swift Student Challenge Distinguished Winner — Apple Developer">
+          <span class="award-spark" aria-hidden="true">✳</span>
+          <span class="award-copy"><span class="award-event">2026 Swift Student Challenge</span><strong>Distinguished Winner</strong></span>
+        </a>
+        <p class="eyebrow">A LITTLE WORLD OF COLOR</p>
+        <h1 id="hero-title">Make it <em>pixel.</em><br>Make it <em>yours.</em></h1>
+        <p class="lead">Turn an idea, a photo, or a few colorful beads into art you can actually make. Design freely, follow along, and see the finished piece in 3D.</p>
         <div class="actions">
-          <a class="button primary" href="./support/">Get Support</a>
-          <a class="button-link" href="./privacy/">Privacy Policy &rarr;</a>
+          <a class="button primary" href="#features">Explore the app <span aria-hidden="true">↗</span></a>
+          <a class="button-link" href="./support/">How it works <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="product-visual">
-        <img class="product-screenshot" src="assets/hero-ipad.png" alt="Pixel Beader iPad App screenshot showing the circular bead canvas.">
+      <div class="hero-art">
+        <div class="hero-art-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-art-orbit orbit-two" aria-hidden="true"></div>
+        <span class="hero-art-label">YOUR IDEAS, IN FULL COLOR</span>
+        <img class="product-screenshot" src="assets/hero-ipad.png" alt="Pixel Beader on iPad, showing a colorful circular bead design." fetchpriority="high">
       </div>
     </section>
 
-    <!-- Showcase Section -->
-    <section class="showcase-section">
-      <div class="section-title-wrap">
-        <span class="section-tag">Gallery</span>
-        <h2 class="section-title">App <span class="serif-italic">Interface Gallery</span></h2>
+    <div class="ticker" aria-label="Design, convert, create, preview">
+      <div class="ticker-inner"><span>ONE BEAD AT A TIME</span><b>✳</b><span>ANY IDEA CAN GROW</span><b>✳</b><span>ONE BEAD AT A TIME</span><b>✳</b><span>ANY IDEA CAN GROW</span></div>
+    </div>
+
+    <section class="showcase-section" id="features" aria-labelledby="features-title">
+      <div class="section-intro">
+        <div><span class="section-tag"><span class="tag-dot"></span> INSIDE THE APP</span><h2 id="features-title">From first spark<br>to <em>finished piece.</em></h2></div>
+        <p>Every step of making bead art, gathered in one playful workspace.</p>
       </div>
+
       <div class="showcase-grid">
-        <div class="showcase-card">
-          <img src="assets/jietu1.png" alt="Pixel Beader Canvas Editor Screenshot">
-          <div class="showcase-info">
-            <h3>Designer</h3>
-            <p>Create bead art directly on a clean pegboard workspace.</p>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="assets/jietu2.png" alt="Pixel Beader Photo Converter Screenshot">
-          <div class="showcase-info">
-            <h3>Canvas</h3>
-            <p>Convert images into detailed bead patterns with precise controls.</p>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="assets/jietu3.png" alt="Pixel Beader 3D Fused Preview Screenshot">
-          <div class="showcase-info">
-            <h3>Interactive Pattern Mode</h3>
-            <p>Read bead codes, follow rows, and work through designs step by step.</p>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="assets/jietu4.png" alt="Pixel Beader Color Palette Screenshot">
-          <div class="showcase-info">
-            <h3>3D and AR Preview</h3>
-            <p>Inspect fused bead finishes in 3D and place them in your space with AR.</p>
-          </div>
-        </div>
+        <article class="showcase-card card-coral">
+          <div class="showcase-heading"><span class="card-index">01 / DESIGN</span></div>
+          <div class="showcase-image"><img src="assets/jietu1.png" alt="A red heart drawn with beads on the Pixel Beader pegboard." loading="lazy"></div>
+          <div class="showcase-info"><h3>Start with a single bead.</h3><p>Draw directly on a clean pegboard and watch your idea take shape, color by color.</p></div>
+        </article>
+        <article class="showcase-card card-yellow">
+          <div class="showcase-heading"><span class="card-index">02 / CONVERT</span></div>
+          <div class="showcase-image"><img src="assets/jietu2.png" alt="A colorful photo transformed into a bead pattern with palette controls." loading="lazy"></div>
+          <div class="showcase-info"><h3>Bring photos into focus.</h3><p>Turn favorite images into bead patterns, then tune the grid and palette to make them your own.</p></div>
+        </article>
+        <article class="showcase-card card-blue">
+          <div class="showcase-heading"><span class="card-index">03 / INTERACTIVE PATTERN</span></div>
+          <div class="showcase-image"><img src="assets/jietu3.png" alt="A pattern with bead color codes and highlighted guide row." loading="lazy"></div>
+          <div class="showcase-info"><h3>Interactive Pattern Mode.</h3><p>Tap to explore the pattern, read bead color codes, and focus on highlighted rows and columns.</p></div>
+        </article>
+        <article class="showcase-card card-lilac">
+          <div class="showcase-heading"><span class="card-index">04 / PREVIEW</span></div>
+          <div class="showcase-image"><img src="assets/jietu4.png" alt="A colorful fused bead piece shown in the app's 3D preview." loading="lazy"></div>
+          <div class="showcase-info"><h3>See the magic ahead.</h3><p>Explore the fused finish in 3D and get a feel for your creation before you make it.</p></div>
+        </article>
       </div>
     </section>
 
+    <section class="closing-panel" aria-labelledby="closing-title">
+      <div class="closing-mark" aria-hidden="true">✳</div>
+      <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
+      <h2 id="closing-title">Small pieces.<br><em>Endless possibilities.</em></h2>
+      <p>Questions about Pixel Beader? We’re here to help you keep creating.</p>
+      <a class="button light-button" href="./support/">Visit support <span aria-hidden="true">↗</span></a>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <span>&copy; 2026 Pixel Beader</span>
-    <div class="footer-nav">
-      <a href="./support/">Support</a>
-      <a href="./privacy/">Privacy</a>
-    </div>
+    <a class="footer-brand" href="./">Pixel Beader<span>.</span></a>
+    <span>© 2026 Pixel Beader</span>
+    <div class="footer-nav"><a href="./support/">Support</a><a href="./privacy/">Privacy</a><a href="#">Back to top ↑</a></div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.getElementById('theme-toggle');
-      
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      
-      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        document.documentElement.classList.add('dark-theme');
-      } else {
-        document.documentElement.classList.add('light-theme');
-      }
-      
-      themeToggle.addEventListener('click', () => {
-        if (document.documentElement.classList.contains('dark-theme')) {
-          document.documentElement.classList.remove('dark-theme');
-          document.documentElement.classList.add('light-theme');
-          localStorage.setItem('theme', 'light');
-        } else {
-          document.documentElement.classList.remove('light-theme');
-          document.documentElement.classList.add('dark-theme');
-          localStorage.setItem('theme', 'dark');
-        }
-      });
-    });
-  </script>
+  <script src="theme.js" defer></script>
 </body>
 </html>
