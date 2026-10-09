@@ -54,13 +54,9 @@ nav a:hover, nav a.active { color: var(--text-color); }
 /* Hero */
 .hero { max-width: 1480px; margin: 0 auto; padding: 46px 42px 72px; min-height: 690px; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); align-items: stretch; gap: 44px; }
 .hero-copy { padding: 65px 0 26px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
-.award-pill { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 32px; padding: 12px 19px 12px 12px; border: 1px solid #d9c792; border-radius: 17px; background: #fbf4df; color: #65582e; transition: transform .2s, box-shadow .2s, border-color .2s; }
-.award-pill:hover { transform: translateY(-2px); border-color: #bc9953; box-shadow: 0 8px 22px rgba(90,72,35,.12); }
-.award-pill:hover strong { text-decoration: underline; text-underline-offset: 3px; }
-.award-spark { width: 47px; height: 47px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 12px; background: #ead8a7; color: #896620; font-size: 29px; line-height: 1; }
-.award-copy { display: flex; flex-direction: column; gap: 3px; }
-.award-event { font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; line-height: 1.25; }
-.award-pill strong { font-size: 24px; font-weight: 900; letter-spacing: -.045em; line-height: 1.12; }
+.award-pill { display: block; width: min(100%, 360px); margin-bottom: 32px; color: #65582e; transition: transform .2s; }
+.award-pill:hover { transform: translateY(-2px); }
+.award-image { display: block; width: 100%; aspect-ratio: 1942 / 809; background-color: currentColor; -webkit-mask: url("assets/swift-student-challenge-winner.png") center / contain no-repeat; mask: url("assets/swift-student-challenge-winner.png") center / contain no-repeat; }
 .eyebrow { margin: 0; color: var(--accent); font-size: 11px; font-weight: 900; letter-spacing: .2em; }
 .hero h1 { max-width: 660px; margin: 15px 0 21px; font-size: clamp(57px, 5.55vw, 88px); line-height: .99; letter-spacing: -.075em; font-weight: 800; }
 .hero h1 em { color: var(--accent); letter-spacing: -.075em; }
@@ -98,7 +94,7 @@ nav a:hover, nav a.active { color: var(--text-color); }
 .showcase-heading { display: flex; align-items: center; justify-content: space-between; }
 .card-index { font-size: 11px; font-weight: 900; letter-spacing: .17em; }
 .showcase-image { height: clamp(245px, 30vw, 425px); display: grid; place-items: center; margin: 8px -10px 15px; }
-.showcase-image img { width: min(100%, 600px); filter: drop-shadow(0 18px 15px rgba(42,43,52,.16)); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+.showcase-image img { width: min(100%, 600px); height: auto; max-height: 100%; object-fit: contain; filter: drop-shadow(0 18px 15px rgba(42,43,52,.16)); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
 .showcase-card:hover .showcase-image img { transform: translateY(-7px) rotate(-1deg); }
 .showcase-info { display: flex; align-items: end; justify-content: space-between; gap: 22px; padding-top: 21px; border-top: 1px solid rgba(39,39,42,.19); }
 .showcase-info h3 { max-width: 235px; margin: 0; font-size: clamp(23px, 2vw, 30px); line-height: 1.05; letter-spacing: -.05em; }
@@ -135,7 +131,7 @@ nav a:hover, nav a.active { color: var(--text-color); }
 .page-content a:not(.button) { color: var(--accent); text-decoration: underline; }
 .page-content .button { color: var(--bg-color); }
 
-.dark-theme .award-pill { border-color: #776742; background: #343026; color: #e9d59b; }
+.dark-theme .award-pill { color: #e9d59b; }
 .dark-theme .ticker { background: #282944; color: #c8c9ff; }
 .dark-theme .hero-art { background: radial-gradient(circle at 70% 30%, #665b73 0 18%, transparent 49%), linear-gradient(133deg, #373e66, #51415b); }
 .dark-theme .hero-art-label { color: #eee7ff; }
@@ -181,10 +177,7 @@ nav a:hover, nav a.active { color: var(--text-color); }
   .brand { font-size: 16px; gap: 8px; }.brand-icon { width: 29px; height: 29px; }
   nav { gap: 16px; } nav a { font-size: 11px; } nav a:last-child { display: none; }
   .nav-actions { gap: 11px; }.theme-toggle-btn { width: 32px; height: 32px; }
-  .award-pill { margin-bottom: 30px; max-width: 340px; gap: 10px; padding: 10px 13px 10px 10px; }
-  .award-spark { width: 40px; height: 40px; font-size: 25px; }
-  .award-event { font-size: 9px; letter-spacing: .06em; }
-  .award-pill strong { font-size: 18px; }
+  .award-pill { margin-bottom: 30px; width: min(100%, 320px); }
   .hero h1 { font-size: clamp(51px, 12vw, 68px); }
   .hero-art { aspect-ratio: 1.16; border-radius: 20px; }
   .hero-art-label { top: 20px; left: 20px; font-size: 8px; }
