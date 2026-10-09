@@ -53,7 +53,7 @@ nav a:hover, nav a.active { color: var(--text-color); }
 
 /* Hero */
 .hero { max-width: 1480px; margin: 0 auto; padding: 46px 42px 72px; min-height: 690px; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); align-items: stretch; gap: 44px; }
-.hero-copy { padding: 0 0 26px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+.hero-copy { padding: 32px 0 26px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
 .award-pill { display: block; width: min(100%, 322px); padding: 8px; margin-bottom: 18px; color: #65582e; transition: transform .2s; }
 .award-pill:hover { transform: translateY(-2px); }
 /* Fit the mask to the artwork bounds, excluding the source image’s transparent margins. */
