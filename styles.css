@@ -66,7 +66,7 @@ nav a:hover, nav a.active { color: var(--text-color); }
 .button { min-height: 51px; display: inline-flex; align-items: center; justify-content: center; gap: 28px; padding: 12px 19px 12px 22px; border: 1px solid var(--text-color); border-radius: 999px; font-size: 13px; font-weight: 800; transition: transform .2s, background .2s, box-shadow .2s; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 10px 23px rgba(0,0,0,.11); }
 .app-store-badge { display: inline-flex; flex-shrink: 0; border-radius: 8px; transition: transform .2s; }
-.app-store-badge img { width: auto; height: 51px; }
+.app-store-badge img { width: auto; height: 40px; }
 .app-store-badge:hover { transform: translateY(-2px); }
 .button.primary { background: var(--text-color); color: var(--bg-color); }
 .button-link { display: inline-flex; gap: 9px; align-items: center; font-size: 13px; font-weight: 800; border-bottom: 1px solid var(--text-color); padding-bottom: 4px; }
